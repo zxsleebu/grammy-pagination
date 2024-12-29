@@ -1,0 +1,30 @@
+{
+	"name": "grammy-pagination",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "pnpm nodemon -w src -e ts,tsx --exec \"(pnpm swc ./src -d dist) && (pnpm --silent start)\"",
+		"build": "pnpm swc ./src -d dist",
+		"start": "node --trace-warnings --trace-deprecation -r source-map-support/register ./dist/src/index.js",
+		"preinstall": "typesync"
+	},
+	"exports": "./dist/mod.js",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.16.0",
+		"@swc/cli": "^0.5.2",
+		"@swc/core": "^1.10.0",
+		"eslint": "^9.16.0",
+		"globals": "^15.13.0",
+		"nodemon": "^3.1.7",
+		"source-map-support": "^0.5.21",
+		"typescript-eslint": "^8.17.0",
+		"typesync": "^0.14.0"
+	},
+	"dependencies": {
+		"grammy": "^1.33.0"
+	}
+}
